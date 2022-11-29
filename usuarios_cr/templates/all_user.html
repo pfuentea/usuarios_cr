@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Usuario</title>
+</head>
+<body>
+    
+<h1>ALL USERS</h1>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>FULL NAME</td>
+        <td>Email</td>
+        <td>Created_at</td>
+    </tr>
+        
+    {% for user in usuarios %}
+    <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.first_name}} {{user.last_name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.created_at}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+<a href="/users/new">Add a new User</a>
+
+</body>
+</html>
